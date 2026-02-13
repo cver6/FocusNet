@@ -14,3 +14,5 @@ pip install torch==2.3.1 torchvision==0.18.1 --index-url https://download.pytorc
 pip install natten==0.17.1+torch230cu121 -f https://shi-labs.com/natten/wheels/
 pip install timm==0.6.12
 pip install mmengine==0.2.0
+
+To accelerate training and inference, we utilize the efficient large-kernel convolution proposed in [RepLKNet](https://github.com/DingXiaoH/RepLKNet-pytorch#use-our-efficient-large-kernel-convolution-with-pytorch). Please follow this [guideline](https://github.com/VITA-Group/SLaK#installation) to install the `depthwise_conv2d_implicit_gemm` function.
