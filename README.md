@@ -17,5 +17,7 @@ pip install mmengine==0.2.0
 ```
 To accelerate training and inference, we utilize the efficient large-kernel convolution proposed in [RepLKNet](https://github.com/DingXiaoH/RepLKNet-pytorch#use-our-efficient-large-kernel-convolution-with-pytorch). Please follow this [guideline](https://github.com/VITA-Group/SLaK#installation) to install the `depthwise_conv2d_implicit_gemm` function.
 
+Download the pre-trained weights of [OverLoCK-T](https://github.com/LMMMEng/OverLoCK/releases/download/v1/overlock_t_in1k_224.pth)
+
 ## 2. Data Preparation
 Prepare [University-1652](https://github.com/layumi/University1652-Baseline) & [SUES-200](https://github.com/Reza-Zhu/SUES-200-Benchmark)
