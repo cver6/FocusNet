@@ -37,6 +37,8 @@ Download the pre-trained weights of [OverLoCK-T](https://github.com/LMMMEng/Over
 ## 2. Data Preparation
 Prepare [University-1652](https://github.com/layumi/University1652-Baseline) & [SUES-200](https://github.com/Reza-Zhu/SUES-200-Benchmark)
 
+## 3. Prediction
+
 ## Acknowledgements
 [OverLoCK](https://github.com/LMMMEng/OverLoCK)
 
