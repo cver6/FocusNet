@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-
 Geometric re-ranking:
   - Enable with --enable_geometric_rerank
   - Supports XFeat matching modes: sparse and semi_dense
@@ -535,7 +534,7 @@ if __name__ == '__main__':
     if args.enable_geometric_rerank:
         # 启用几何重排序：五模式对比评估
         print(f"\n=== Evaluation with geometric rerank (Top-{args.geometric_rerank_top_k}) ===")
-        r1_baseline, results_sparse, results_magsac, results_semidense, results_semidense_magsac = evaluate_all_modes(
+        evaluate_all_modes(
             config=config,
             model=model,
             query_loader=query_dataloader_test,
@@ -546,14 +545,6 @@ if __name__ == '__main__':
             vis_output_dir=args.vis_output_dir,
             vis_top_k=args.vis_top_k
         )
-        
-        print("\n=== Final summary ===")
-        r1_baseline_val = r1_baseline.item() if hasattr(r1_baseline, 'item') else r1_baseline
-        print(f"Baseline R@1: {r1_baseline_val * 100:.4f}")
-        print(f"Sparse + affine R@1: {results_sparse['CMC'][0].item() * 100:.4f}")
-        print(f"Sparse + MAGSAC++ R@1: {results_magsac['CMC'][0].item() * 100:.4f}")
-        print(f"Semi-dense + affine R@1: {results_semidense['CMC'][0].item() * 100:.4f}")
-        print(f"Semi-dense + MAGSAC++ R@1: {results_semidense_magsac['CMC'][0].item() * 100:.4f}")
     else:
         # 标准评估（无重排序）
         print("\n=== Evaluation (no rerank) ===")
